@@ -27,6 +27,9 @@
                                 <rect key="frame" x="328" y="67" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="onTintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="themeSwitchOnChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BKH-S7-qjM"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYf-qx-uXZ">
                                 <rect key="frame" x="16" y="164" width="361" height="254"/>
@@ -37,19 +40,56 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRR-wf-NgB">
-                                <rect key="frame" x="16" y="749" width="359" height="35"/>
+                                <rect key="frame" x="16" y="709" width="359" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Copy"/>
+                                <connections>
+                                    <action selector="copyButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0wN-bZ-LNV"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-XH-zBs">
+                                <rect key="frame" x="168" y="752" width="49" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="systemGreenColor"/>
+                            </activityIndicatorView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter The Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fck-MH-D88">
+                                <rect key="frame" x="16" y="442" width="359" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-DI-luR">
+                                <rect key="frame" x="16" y="484" width="359" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-eX-903">
+                                <rect key="frame" x="16" y="642" width="361" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Change Theme"/>
+                                <connections>
+                                    <action selector="ChangeThemeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7JA-iP-aya"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="copyButton" destination="HRR-wf-NgB" id="gFg-qY-RV9"/>
+                        <outlet property="exaLoremLabel" destination="kYf-qx-uXZ" id="8bT-Nx-Xcb"/>
+                        <outlet property="loadingIndicator" destination="zdH-XH-zBs" id="gbG-x9-ksc"/>
+                        <outlet property="nameTextField" destination="fck-MH-D88" id="hLt-Tw-ajT"/>
+                        <outlet property="nameTextFieldProgressBar" destination="qM4-DI-luR" id="nGz-n4-CoJ"/>
+                        <outlet property="themeSwitchButton" destination="iJm-7g-SjE" id="49N-CZ-Nkw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="-142.74809160305344" y="-30.985915492957748"/>
         </scene>
     </scenes>
     <resources>
